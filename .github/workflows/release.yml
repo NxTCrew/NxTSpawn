@@ -47,6 +47,6 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: "${{ github.event.inputs.name }} ${{ github.event.inputs.version }} - ${{ github.event.inputs.author }}"
+          name: "plugin"
           path: |
               build/libs/*.jar
