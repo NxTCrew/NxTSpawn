@@ -1,0 +1,7 @@
+{
+  "name": "NxTSpawn",
+  "version": "${project.version}",
+  "description": "NxTSpawn is a plugin that allows you to set your spawnpoint.",
+  "main": "nxt.extensions.NxTSpawn",
+  "author": "NxTCrew"
+}
