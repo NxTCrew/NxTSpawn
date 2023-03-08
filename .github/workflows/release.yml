@@ -41,6 +41,12 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/libs/*-all.jar"
+          artifacts: "build/libs/*.jar"
           tag: ${{ steps.vars.outputs.timestamp }}
           commit: ${{ env.GITHUB_SHA }}
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: "${{ github.event.inputs.name }} ${{ github.event.inputs.version }} - ${{ github.event.inputs.author }}"
+          path: |
+              build/libs/*.jar
